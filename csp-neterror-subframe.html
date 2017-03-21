@@ -1,0 +1,12 @@
+<html>
+<head>
+<meta http-equiv="Content-Security-Policy" content="script-src 'self'">
+<script src='neterror-subframe.js'></script>
+</head>
+<body>
+This page has the following meta tags <div id='meta-tags'></div>.
+It embeds an iframe below that should result in a network error.
+The problem is that the CSP specified in the meta tag blocks
+Chrome's network error page from functioning, which (circa March 2017)
+uses inline scripts.
+<body>
