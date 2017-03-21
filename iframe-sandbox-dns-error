@@ -1,0 +1,18 @@
+<html>
+<head>
+<!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; child-src 'self' https:">
+<script src='neterror-subframe.js'></script> -->
+</head>
+<body>
+Below is an iframe with the sandbox element set. It loads a document
+via src= that should result in a DNS error.
+<p>
+The problem (circa March 2017) is that the sandbox disallows scripts, which blocks
+Chrome's network error page from functioning, because it contains 
+uses inline scripts.
+<p>
+A similar problem probably occurs if sandboxing is turned on via the extension manifest, or
+via the 'sandbox' directive in a Content-Security-Policy header.
+<p>
+<iframe width=250 height=176 border=0 sandbox src='https://invalid.hostname.example.com'></iframe>
+<body>
