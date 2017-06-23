@@ -1,8 +1,9 @@
 <html><body>
 <script>
 document.title = '1000MB';
-var mem = new Uint8Array(100 << 20);
+var mem = new Uint8Array(1000 << 20);
 for (var i = 0; i < mem.length; i += 16) {
   mem[i] = i;
 }
 </script>
+  This page allocated 1000MB of JS memory.
